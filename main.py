@@ -1,10 +1,16 @@
 # Импортируем нужные модули
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
+
+import os
+
 import nest_asyncio
 nest_asyncio.apply()
 
-TOKEN = ""  
+bot = telebot.TeleBot(os.getenv('BOT_TOKEN'))
+giga = telebot.TeleBot(os.getenv('GIGA_TOKEN'))
+
+TOKEN = bot 
 
 #для функции get_mathstat_fact()
 matstat_topics = [
@@ -74,7 +80,7 @@ import re
 from pylatexenc.latex2text import LatexNodes2Text
 from latex2mathml.converter import convert
 
-GIGACHAT_KEY = ""
+GIGACHAT_KEY = giga
 
 # ГЛОБАЛЬНЫЙ список пользователей для автоотправки
 subscribers = set()
