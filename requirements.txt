@@ -1,3 +1,8 @@
-pyTelegramBotAPI
-schedule
-requests  # если LLM API
+python-telegram-bot==21.4
+nest_asyncio==1.6.0
+gigachat==1.2.0
+pylatexenc==1.5.2
+latex2mathml==0.9.1
+schedule==1.2.2
+requests==2.32.3
+
